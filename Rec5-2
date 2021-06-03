@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Rec5 {
+    // функция, возвращающая n-ое число Фибоначчи
+    public static int f(int n) {
+        int m;
+        if (n == 0) {
+            return 0;
+        } else if (n == 1) {
+            return 1;
+        } else {
+            m=f(n - 1) + f(n - 2);
+            System.out.println(m);
+            return f(n - 1) + f(n - 2);
+        }
+    }
+
+    public static void main (String[] args) {
+        System.out.println("Введите число ");
+        // считывание переменной n
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        // получение n-ого по счёту числа Фибоначчи
+        int fn = f(n);
+
+        // вывод n-ого по счёту числа Фибоначчи
+        System.out.println("Ваше число - " + fn);
+    }
+}
