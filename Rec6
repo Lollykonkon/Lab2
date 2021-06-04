@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Rec6 {
+    public static void x(int a) {
+        if (a != 0) {
+            x(a / 2);
+            System.out.print(a % 2);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите число, которое вы хотите перевести в двоичную систему счисления: ");
+        int a = sc.nextInt();
+        System.out.println("Двоичное число = ");
+        x(a);
+    }
+}
