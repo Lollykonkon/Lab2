@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Rec7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите размер массива: ");
+        int kol = sc.nextInt();
+        int[] Arr = new int[kol];
+        System.out.println("Ввод массива: ");
+        Input(Arr, 0);
+        System.out.println("Вывод массива: ");
+        Output(Arr, 0);
+    }
+    public static int[] Input(int[] a, int kl) {
+        if (a.length > kl) {
+            Scanner sc = new Scanner(System.in);
+            int kol = sc.nextInt();
+            a[kl] = kol;
+            Input(a, kl + 1);
+        }
+        return a;
+    }
+    public static void Output(int[] a, int kl) {
+        if (a.length > kl) {
+            System.out.println(a[kl]);
+            Output(a, kl+1);
+        }
+    }
+}
